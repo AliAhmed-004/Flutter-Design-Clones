@@ -159,34 +159,21 @@ class HomePage extends StatelessWidget {
                 SizedBox(height: 80),
 
                 // -> Carousel of Designers
-                // TODO Convert to CarouselSlider.builder()
-                CarouselSlider(
-                  items: [
-                    ClipRRect(
-                        borderRadius: BorderRadius.circular(35),
-                        child: Image.asset('assets/designers/designer1.png')),
-                    ClipRRect(
-                        borderRadius: BorderRadius.circular(35),
-                        child: Image.asset('assets/designers/designer2.png')),
-                    ClipRRect(
-                        borderRadius: BorderRadius.circular(35),
-                        child: Image.asset('assets/designers/designer3.png')),
-                    ClipRRect(
-                        borderRadius: BorderRadius.circular(35),
-                        child: Image.asset('assets/designers/designer5.png')),
-                    ClipRRect(
-                        borderRadius: BorderRadius.circular(35),
-                        child: Image.asset('assets/designers/designer6.png')),
-                    ClipRRect(
-                        borderRadius: BorderRadius.circular(35),
-                        child: Image.asset('assets/designers/designer7.png')),
-                  ],
+                CarouselSlider.builder(
+                  itemCount: designerPaths.length,
+                  itemBuilder: (context, int index, int realIndex) => ClipRRect(
+                    borderRadius: BorderRadius.circular(10),
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                      child: Image.asset(designerPaths[index]),
+                    ),
+                  ),
                   options: CarouselOptions(
                     height: 400,
                     autoPlay: true,
-                    viewportFraction: 0.2,
+                    viewportFraction: 0.15,
                     enableInfiniteScroll: true,
-                    autoPlayInterval: Duration(milliseconds: 5000),
+                    autoPlayInterval: Duration(seconds: 5),
                     autoPlayCurve: Curves.linear,
                     autoPlayAnimationDuration: Duration(seconds: 5),
                     scrollPhysics: NeverScrollableScrollPhysics(),
@@ -210,18 +197,30 @@ class HomePage extends StatelessWidget {
                 // - -> Actual Inpirations
                 // TODO Convert this into a Grid Layout
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    Image.asset('assets/inspirations/inspiration1.png'),
-                    Image.asset('assets/inspirations/inspiration2.png'),
-                    Image.asset('assets/inspirations/inspiration3.png'),
-                    Image.asset('assets/inspirations/inspiration4.png'),
+                    Image.asset('assets/inspirations/inspiration1.png',
+                        height: 400),
+                    Image.asset('assets/inspirations/inspiration2.png',
+                        height: 400),
+                    Image.asset('assets/inspirations/inspiration3.png',
+                        height: 400),
+                    Image.asset('assets/inspirations/inspiration4.png',
+                        height: 400),
                   ],
                 ),
                 SizedBox(height: 32),
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    Image.asset('assets/inspirations/inspiration5.png'),
-                    Image.asset('assets/inspirations/inspiration6.png'),
+                    Image.asset('assets/inspirations/inspiration5.png',
+                        height: 400),
+                    Image.asset('assets/inspirations/inspiration6.png',
+                        height: 400),
+                    Image.asset('assets/inspirations/inspiration7.png',
+                        height: 400),
+                    Image.asset('assets/inspirations/inspiration8.png',
+                        height: 400),
                   ],
                 ),
 

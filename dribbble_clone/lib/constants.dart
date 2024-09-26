@@ -16,12 +16,12 @@ List<String> secondInspirationPaths = [
   'assets/second_inspirations/inspiration6.png',
   'assets/second_inspirations/inspiration7.png',
   'assets/second_inspirations/inspiration8.png',
-  'assets/second_inspirations/inspiration9.png',
-  'assets/second_inspirations/inspiration10.png',
+  // 'assets/second_inspirations/inspiration9.png',
+  // 'assets/second_inspirations/inspiration10.png',
 ];
 
 List<String> designerPaths = [
-  'assets/designers/designer1.png',
+  'assets/designers/designer1.jpeg',
   'assets/designers/designer2.png',
   'assets/designers/designer3.png',
   'assets/designers/designer4.png',
